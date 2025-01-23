@@ -1,4 +1,6 @@
-﻿using Dapper;
+﻿using AutoMapper;
+using Dapper;
+using HardkorowyKodsu.WebApi.Dto.Query;
 using HardkorowyKodsu.WebApi.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.FileSystemGlobbing.Internal;
@@ -8,15 +10,17 @@ namespace HardkorowyKodsu.WebApi.Repositories
 {
     public class DatabaseInfoRepository : IDatabaseInfoRepository
     {
+        private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
         private static string _connectionString = "";
 
-        public DatabaseInfoRepository(IConfiguration configuration)
+        public DatabaseInfoRepository(IConfiguration configuration, IMapper mapper)
         {
-            _configuration = configuration;            
+            _configuration = configuration;
+            _mapper = mapper;
         }                
 
-        public async Task<List<TableDetails>> GetAllTablesAndViews(string databaseName)
+        public async Task<List<TableDetailsOutputDto>> GetAllTablesAndViews(string databaseName)
         {
             using var connection = GetConnection(databaseName);
 
@@ -24,10 +28,10 @@ namespace HardkorowyKodsu.WebApi.Repositories
                 "SELECT * " +
                 "FROM INFORMATION_SCHEMA.TABLES");
 
-            return tables.ToList();
+            return _mapper.Map<List<TableDetailsOutputDto>>(tables.ToList());
         }
 
-        public async Task<List<ColumnDetails>> GetAllColumns(string tableName)
+        public async Task<List<ColumnDetailsOutputDto>> GetAllColumns(string tableName)
         {
             using var connection = GetConnection();
 
@@ -36,7 +40,7 @@ namespace HardkorowyKodsu.WebApi.Repositories
                 "FROM INFORMATION_SCHEMA.COLUMNS " +
                 "WHERE TABLE_NAME = @TableName", new { TableName = tableName });
 
-            return columns.ToList();
+            return _mapper.Map<List<ColumnDetailsOutputDto>>(columns.ToList());
         }
 
         private SqlConnection GetConnection(string databaseName = "")

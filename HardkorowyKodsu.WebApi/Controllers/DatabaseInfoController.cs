@@ -1,4 +1,4 @@
-﻿using HardkorowyKodsu.WebApi.Models;
+﻿using HardkorowyKodsu.WebApi.Dto.Query;
 using HardkorowyKodsu.WebApi.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,8 +15,8 @@ namespace HardkorowyKodsu.WebApi.Controllers
             _databaseInfoRepository = databaseInfoRepository;
         }
 
-        [HttpGet()]
-        public async Task<ActionResult<List<TableDetails>>> GetAllTables(string databaseName = "")
+        [HttpGet("{databaseName?}")]
+        public async Task<ActionResult<List<TableDetailsOutputDto>>> GetAllTables(string databaseName = "")
         {
             var tables = await _databaseInfoRepository.GetAllTablesAndViews(databaseName);
 
@@ -27,7 +27,7 @@ namespace HardkorowyKodsu.WebApi.Controllers
         }
 
         [HttpGet("{tableName}")]
-        public async Task<ActionResult<List<ColumnDetails>>> GetAllColumns(string tableName)
+        public async Task<ActionResult<List<ColumnDetailsOutputDto>>> GetAllColumns(string tableName)
         {
             var columns = await _databaseInfoRepository.GetAllColumns(tableName);
 

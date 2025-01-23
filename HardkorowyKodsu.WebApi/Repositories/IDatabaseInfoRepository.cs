@@ -1,10 +1,11 @@
-﻿using HardkorowyKodsu.WebApi.Models;
+﻿using HardkorowyKodsu.WebApi.Dto.Query;
+using HardkorowyKodsu.WebApi.Models;
 
 namespace HardkorowyKodsu.WebApi.Repositories
 {
     public interface IDatabaseInfoRepository
     {
-        public Task<List<TableDetails>> GetAllTablesAndViews(string databaseName);
-        public Task<List<ColumnDetails>> GetAllColumns(string tableName);
+        public Task<List<TableDetailsOutputDto>> GetAllTablesAndViews(string databaseName);
+        public Task<List<ColumnDetailsOutputDto>> GetAllColumns(string tableName);
     }
 }
