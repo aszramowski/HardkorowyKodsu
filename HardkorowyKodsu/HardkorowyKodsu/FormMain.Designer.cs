@@ -33,12 +33,12 @@ namespace HardkorowyKodsu
             this.btnTables = new DevExpress.XtraEditors.SimpleButton();
             this.btnColumns = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rtxMessage = new System.Windows.Forms.RichTextBox();
             this.tbcDatabaseInfo = new System.Windows.Forms.TabControl();
             this.tbpTables = new System.Windows.Forms.TabPage();
             this.grvTables = new System.Windows.Forms.DataGridView();
             this.tbpColumns = new System.Windows.Forms.TabPage();
             this.grvColumns = new System.Windows.Forms.DataGridView();
-            this.rtxMessage = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.tbcDatabaseInfo.SuspendLayout();
             this.tbpTables.SuspendLayout();
@@ -83,8 +83,16 @@ namespace HardkorowyKodsu
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(132, 450);
+            this.panel1.Size = new System.Drawing.Size(132, 516);
             this.panel1.TabIndex = 6;
+            // 
+            // rtxMessage
+            // 
+            this.rtxMessage.Location = new System.Drawing.Point(0, 3);
+            this.rtxMessage.Name = "rtxMessage";
+            this.rtxMessage.Size = new System.Drawing.Size(132, 41);
+            this.rtxMessage.TabIndex = 4;
+            this.rtxMessage.Text = "";
             // 
             // tbcDatabaseInfo
             // 
@@ -94,7 +102,7 @@ namespace HardkorowyKodsu
             this.tbcDatabaseInfo.Location = new System.Drawing.Point(132, 0);
             this.tbcDatabaseInfo.Name = "tbcDatabaseInfo";
             this.tbcDatabaseInfo.SelectedIndex = 0;
-            this.tbcDatabaseInfo.Size = new System.Drawing.Size(668, 450);
+            this.tbcDatabaseInfo.Size = new System.Drawing.Size(842, 516);
             this.tbcDatabaseInfo.TabIndex = 7;
             // 
             // tbpTables
@@ -124,7 +132,7 @@ namespace HardkorowyKodsu
             this.tbpColumns.Location = new System.Drawing.Point(4, 22);
             this.tbpColumns.Name = "tbpColumns";
             this.tbpColumns.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpColumns.Size = new System.Drawing.Size(660, 424);
+            this.tbpColumns.Size = new System.Drawing.Size(834, 490);
             this.tbpColumns.TabIndex = 1;
             this.tbpColumns.Text = "Columns";
             this.tbpColumns.UseVisualStyleBackColor = true;
@@ -133,26 +141,17 @@ namespace HardkorowyKodsu
             // 
             this.grvColumns.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvColumns.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grvColumns.Enabled = false;
             this.grvColumns.Location = new System.Drawing.Point(3, 3);
             this.grvColumns.Name = "grvColumns";
             this.grvColumns.ReadOnly = true;
-            this.grvColumns.Size = new System.Drawing.Size(654, 418);
-            this.grvColumns.TabIndex = 0;
-            // 
-            // rtxMessage
-            // 
-            this.rtxMessage.Location = new System.Drawing.Point(0, 3);
-            this.rtxMessage.Name = "rtxMessage";
-            this.rtxMessage.Size = new System.Drawing.Size(132, 41);
-            this.rtxMessage.TabIndex = 4;
-            this.rtxMessage.Text = "";
+            this.grvColumns.Size = new System.Drawing.Size(828, 484);
+            this.grvColumns.TabIndex = 1;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(974, 516);
             this.Controls.Add(this.tbcDatabaseInfo);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
