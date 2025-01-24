@@ -26,8 +26,8 @@ namespace HardkorowyKodsu.WebApi.Controllers
                 return Ok(tables);
         }
 
-        [HttpGet("{tableName}")]
-        public async Task<ActionResult<List<ColumnDetailsOutputDto>>> GetAllColumns(string tableName)
+        [HttpGet("{tableName?}")]
+        public async Task<ActionResult<List<ColumnDetailsOutputDto>>> GetAllColumns(string tableName = "")
         {
             var columns = await _databaseInfoRepository.GetAllColumns(tableName);
 

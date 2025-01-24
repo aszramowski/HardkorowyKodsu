@@ -18,9 +18,32 @@ namespace HardkorowyKodsu.WebApi.Repositories
         {
             _configuration = configuration;
             _mapper = mapper;
-        }                
+        }
 
-        public async Task<List<TableDetailsOutputDto>> GetAllTablesAndViews(string databaseName)
+        public async Task<List<ColumnDetailsOutputDto>> GetAllColumns(string tableName = "")
+        {
+            IEnumerable<ColumnDetails> columns;
+
+            using var connection = GetConnection();
+
+            if (tableName == "")
+            {
+                columns = await connection.QueryAsync<ColumnDetails>(
+                    "SELECT * " +
+                    "FROM INFORMATION_SCHEMA.COLUMNS");
+            } 
+            else
+            {
+                columns = await connection.QueryAsync<ColumnDetails>(
+                    "SELECT * " +
+                    "FROM INFORMATION_SCHEMA.COLUMNS " +
+                    "WHERE TABLE_NAME = @TableName", new { TableName = tableName });
+            }
+
+            return _mapper.Map<List<ColumnDetailsOutputDto>>(columns.ToList());
+        }
+
+        public async Task<List<TableDetailsOutputDto>> GetAllTablesAndViews(string databaseName = "")
         {
             using var connection = GetConnection(databaseName);
 
@@ -29,18 +52,6 @@ namespace HardkorowyKodsu.WebApi.Repositories
                 "FROM INFORMATION_SCHEMA.TABLES");
 
             return _mapper.Map<List<TableDetailsOutputDto>>(tables.ToList());
-        }
-
-        public async Task<List<ColumnDetailsOutputDto>> GetAllColumns(string tableName)
-        {
-            using var connection = GetConnection();
-
-            var columns = await connection.QueryAsync<ColumnDetails>(
-                "SELECT * " +
-                "FROM INFORMATION_SCHEMA.COLUMNS " +
-                "WHERE TABLE_NAME = @TableName", new { TableName = tableName });
-
-            return _mapper.Map<List<ColumnDetailsOutputDto>>(columns.ToList());
         }
 
         private SqlConnection GetConnection(string databaseName = "")

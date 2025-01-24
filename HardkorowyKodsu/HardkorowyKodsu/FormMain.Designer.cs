@@ -29,85 +29,156 @@ namespace HardkorowyKodsu
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnProccess = new DevExpress.XtraEditors.SimpleButton();
-            this.rtxData = new System.Windows.Forms.RichTextBox();
-            this.btnProcess1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnProcess2 = new DevExpress.XtraEditors.SimpleButton();
-            this.rtxTableName = new System.Windows.Forms.RichTextBox();
+            this.btnVersion = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTables = new DevExpress.XtraEditors.SimpleButton();
+            this.btnColumns = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tbcDatabaseInfo = new System.Windows.Forms.TabControl();
+            this.tbpTables = new System.Windows.Forms.TabPage();
+            this.grvTables = new System.Windows.Forms.DataGridView();
+            this.tbpColumns = new System.Windows.Forms.TabPage();
+            this.grvColumns = new System.Windows.Forms.DataGridView();
+            this.rtxMessage = new System.Windows.Forms.RichTextBox();
+            this.panel1.SuspendLayout();
+            this.tbcDatabaseInfo.SuspendLayout();
+            this.tbpTables.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvTables)).BeginInit();
+            this.tbpColumns.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grvColumns)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnProccess
+            // btnVersion
             // 
-            this.btnProccess.Location = new System.Drawing.Point(56, 468);
-            this.btnProccess.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnProccess.Name = "btnProccess";
-            this.btnProccess.Size = new System.Drawing.Size(196, 58);
-            this.btnProccess.TabIndex = 0;
-            this.btnProccess.Text = "Process";
-            this.btnProccess.Click += new System.EventHandler(this.btnProccess_ClickAsync);
+            this.btnVersion.Location = new System.Drawing.Point(0, 50);
+            this.btnVersion.Name = "btnVersion";
+            this.btnVersion.Size = new System.Drawing.Size(132, 47);
+            this.btnVersion.TabIndex = 0;
+            this.btnVersion.Text = "Get version";
+            this.btnVersion.Click += new System.EventHandler(this.btnVersion_Click);
             // 
-            // rtxData
+            // btnTables
             // 
-            this.rtxData.Location = new System.Drawing.Point(56, 46);
-            this.rtxData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rtxData.Name = "rtxData";
-            this.rtxData.Size = new System.Drawing.Size(975, 397);
-            this.rtxData.TabIndex = 1;
-            this.rtxData.Text = "";
+            this.btnTables.Location = new System.Drawing.Point(0, 99);
+            this.btnTables.Name = "btnTables";
+            this.btnTables.Size = new System.Drawing.Size(132, 47);
+            this.btnTables.TabIndex = 2;
+            this.btnTables.Text = "Get tables";
+            this.btnTables.Click += new System.EventHandler(this.btnTables_Click);
             // 
-            // btnProcess1
+            // btnColumns
             // 
-            this.btnProcess1.Location = new System.Drawing.Point(260, 468);
-            this.btnProcess1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnProcess1.Name = "btnProcess1";
-            this.btnProcess1.Size = new System.Drawing.Size(196, 58);
-            this.btnProcess1.TabIndex = 2;
-            this.btnProcess1.Text = "Get tables";
-            this.btnProcess1.Click += new System.EventHandler(this.btnProcess1_Click);
+            this.btnColumns.Location = new System.Drawing.Point(0, 147);
+            this.btnColumns.Name = "btnColumns";
+            this.btnColumns.Size = new System.Drawing.Size(132, 47);
+            this.btnColumns.TabIndex = 3;
+            this.btnColumns.Text = "Get columns";
+            this.btnColumns.Click += new System.EventHandler(this.btnColumns_Click);
             // 
-            // btnProcess2
+            // panel1
             // 
-            this.btnProcess2.Location = new System.Drawing.Point(464, 468);
-            this.btnProcess2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnProcess2.Name = "btnProcess2";
-            this.btnProcess2.Size = new System.Drawing.Size(196, 58);
-            this.btnProcess2.TabIndex = 3;
-            this.btnProcess2.Text = "Get columns";
-            this.btnProcess2.Click += new System.EventHandler(this.btnProcess2_Click);
+            this.panel1.Controls.Add(this.rtxMessage);
+            this.panel1.Controls.Add(this.btnVersion);
+            this.panel1.Controls.Add(this.btnTables);
+            this.panel1.Controls.Add(this.btnColumns);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(132, 450);
+            this.panel1.TabIndex = 6;
             // 
-            // rtxTableName
+            // tbcDatabaseInfo
             // 
-            this.rtxTableName.Location = new System.Drawing.Point(691, 468);
-            this.rtxTableName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rtxTableName.Name = "rtxTableName";
-            this.rtxTableName.Size = new System.Drawing.Size(295, 57);
-            this.rtxTableName.TabIndex = 4;
-            this.rtxTableName.Text = "";
+            this.tbcDatabaseInfo.Controls.Add(this.tbpTables);
+            this.tbcDatabaseInfo.Controls.Add(this.tbpColumns);
+            this.tbcDatabaseInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbcDatabaseInfo.Location = new System.Drawing.Point(132, 0);
+            this.tbcDatabaseInfo.Name = "tbcDatabaseInfo";
+            this.tbcDatabaseInfo.SelectedIndex = 0;
+            this.tbcDatabaseInfo.Size = new System.Drawing.Size(668, 450);
+            this.tbcDatabaseInfo.TabIndex = 7;
+            // 
+            // tbpTables
+            // 
+            this.tbpTables.Controls.Add(this.grvTables);
+            this.tbpTables.Location = new System.Drawing.Point(4, 22);
+            this.tbpTables.Name = "tbpTables";
+            this.tbpTables.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpTables.Size = new System.Drawing.Size(660, 424);
+            this.tbpTables.TabIndex = 0;
+            this.tbpTables.Text = "Tables";
+            this.tbpTables.UseVisualStyleBackColor = true;
+            // 
+            // grvTables
+            // 
+            this.grvTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvTables.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grvTables.Location = new System.Drawing.Point(3, 3);
+            this.grvTables.Name = "grvTables";
+            this.grvTables.ReadOnly = true;
+            this.grvTables.Size = new System.Drawing.Size(654, 418);
+            this.grvTables.TabIndex = 0;
+            // 
+            // tbpColumns
+            // 
+            this.tbpColumns.Controls.Add(this.grvColumns);
+            this.tbpColumns.Location = new System.Drawing.Point(4, 22);
+            this.tbpColumns.Name = "tbpColumns";
+            this.tbpColumns.Padding = new System.Windows.Forms.Padding(3);
+            this.tbpColumns.Size = new System.Drawing.Size(660, 424);
+            this.tbpColumns.TabIndex = 1;
+            this.tbpColumns.Text = "Columns";
+            this.tbpColumns.UseVisualStyleBackColor = true;
+            // 
+            // grvColumns
+            // 
+            this.grvColumns.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grvColumns.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grvColumns.Enabled = false;
+            this.grvColumns.Location = new System.Drawing.Point(3, 3);
+            this.grvColumns.Name = "grvColumns";
+            this.grvColumns.ReadOnly = true;
+            this.grvColumns.Size = new System.Drawing.Size(654, 418);
+            this.grvColumns.TabIndex = 0;
+            // 
+            // rtxMessage
+            // 
+            this.rtxMessage.Location = new System.Drawing.Point(0, 3);
+            this.rtxMessage.Name = "rtxMessage";
+            this.rtxMessage.Size = new System.Drawing.Size(132, 41);
+            this.rtxMessage.TabIndex = 4;
+            this.rtxMessage.Text = "";
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.rtxTableName);
-            this.Controls.Add(this.btnProcess2);
-            this.Controls.Add(this.btnProcess1);
-            this.Controls.Add(this.rtxData);
-            this.Controls.Add(this.btnProccess);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbcDatabaseInfo);
+            this.Controls.Add(this.panel1);
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "HardkorowyKodsu - new module for your drugstore";
+            this.panel1.ResumeLayout(false);
+            this.tbcDatabaseInfo.ResumeLayout(false);
+            this.tbpTables.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grvTables)).EndInit();
+            this.tbpColumns.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grvColumns)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.SimpleButton btnProccess;
-        private System.Windows.Forms.RichTextBox rtxData;
-        private DevExpress.XtraEditors.SimpleButton btnProcess1;
-        private DevExpress.XtraEditors.SimpleButton btnProcess2;
-        private System.Windows.Forms.RichTextBox rtxTableName;
+        private DevExpress.XtraEditors.SimpleButton btnVersion;
+        private DevExpress.XtraEditors.SimpleButton btnTables;
+        private DevExpress.XtraEditors.SimpleButton btnColumns;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TabControl tbcDatabaseInfo;
+        private System.Windows.Forms.TabPage tbpTables;
+        private System.Windows.Forms.TabPage tbpColumns;
+        private System.Windows.Forms.DataGridView grvColumns;
+        private System.Windows.Forms.DataGridView grvTables;
+        private System.Windows.Forms.RichTextBox rtxMessage;
     }
 }
 
