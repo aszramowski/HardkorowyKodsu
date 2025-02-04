@@ -1,4 +1,4 @@
-﻿using HardkorowyKodsu.WebApi.Dto.Query;
+﻿using HardkorowyKodsu.Contract.Dto.Query;
 using HardkorowyKodsu.WebApi.Repositories;
 using Microsoft.AspNetCore.Mvc;
 

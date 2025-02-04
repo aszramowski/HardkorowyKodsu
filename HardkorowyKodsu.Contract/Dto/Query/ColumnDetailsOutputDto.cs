@@ -1,4 +1,4 @@
-﻿namespace HardkorowyKodsu.WebApi.Dto.Query
+﻿namespace HardkorowyKodsu.Contract.Dto.Query
 {
     public class ColumnDetailsOutputDto
     {
