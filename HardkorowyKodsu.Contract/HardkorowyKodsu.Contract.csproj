@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dto\Query\ColumnDetailsInputDto.cs" />
+    <Compile Include="Dto\Query\ColumnDetailsOutputDto.cs" />
     <Compile Include="Dto\Query\TableDetailsInputDto.cs" />
+    <Compile Include="Dto\Query\TableDetailsOutputDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

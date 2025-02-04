@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Dapper;
-using HardkorowyKodsu.WebApi.Dto.Query;
+using HardkorowyKodsu.Contract.Dto.Query;
 using HardkorowyKodsu.WebApi.Models;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.FileSystemGlobbing.Internal;
