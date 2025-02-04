@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.34601.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardkorowyKodsu.UI", "HardkorowyKodsu.UI.csproj", "{A2D4C528-AC52-4F66-B3BE-98F570421BD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardkorowyKodsu.Contract", "..\HardkorowyKodsu.Contract\HardkorowyKodsu.Contract.csproj", "{B93A2B42-79F2-485B-83A4-AE4488790E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardkorowyKodsu.Framework", "..\HardkorowyKodsu.Framework\HardkorowyKodsu.Framework.csproj", "{1D8BAF4D-622F-4705-9DD9-D912FB465754}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A2D4C528-AC52-4F66-B3BE-98F570421BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2D4C528-AC52-4F66-B3BE-98F570421BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2D4C528-AC52-4F66-B3BE-98F570421BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93A2B42-79F2-485B-83A4-AE4488790E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93A2B42-79F2-485B-83A4-AE4488790E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93A2B42-79F2-485B-83A4-AE4488790E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93A2B42-79F2-485B-83A4-AE4488790E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8BAF4D-622F-4705-9DD9-D912FB465754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8BAF4D-622F-4705-9DD9-D912FB465754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8BAF4D-622F-4705-9DD9-D912FB465754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8BAF4D-622F-4705-9DD9-D912FB465754}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

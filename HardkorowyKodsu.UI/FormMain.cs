@@ -1,7 +1,7 @@
-﻿using HardkorowyKodsu.UI.Helpers;
-using HardkorowyKodsu.UI.Services;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using HardkorowyKodsu.Framework.Helpers;
+using HardkorowyKodsu.Framework.Services;
 
 namespace HardkorowyKodsu.UI
 {

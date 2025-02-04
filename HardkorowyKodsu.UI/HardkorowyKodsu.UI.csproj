@@ -73,12 +73,8 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dto\Query\ColumnDetailsInputDto.cs" />
-    <Compile Include="Dto\Query\TableDetailsInputDto.cs" />
-    <Compile Include="Helpers\Setting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DatabaseInfoApi.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +101,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\HardkorowyKodsu.Contract\HardkorowyKodsu.Contract.csproj">
+      <Project>{B93A2B42-79F2-485B-83A4-AE4488790E8A}</Project>
+      <Name>HardkorowyKodsu.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HardkorowyKodsu.Framework\HardkorowyKodsu.Framework.csproj">
+      <Project>{1D8BAF4D-622F-4705-9DD9-D912FB465754}</Project>
+      <Name>HardkorowyKodsu.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace HardkorowyKodsu.UI.Helpers
+namespace HardkorowyKodsu.Framework.Helpers
 {
     public class Setting
     {

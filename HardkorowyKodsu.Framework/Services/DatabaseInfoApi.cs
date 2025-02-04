@@ -1,4 +1,4 @@
-﻿using HardkorowyKodsu.UI.Dto.Query;
+﻿using HardkorowyKodsu.Contract.Dto.Query;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HardkorowyKodsu.UI.Services
+namespace HardkorowyKodsu.Framework.Services
 {
     public class DatabaseInfoApi
     {
