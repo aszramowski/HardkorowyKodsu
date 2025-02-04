@@ -1,8 +1,9 @@
-﻿using HardkorowyKodsu.Services;
+﻿using HardkorowyKodsu.UI.Helpers;
+using HardkorowyKodsu.UI.Services;
 using System;
 using System.Windows.Forms;
 
-namespace HardkorowyKodsu
+namespace HardkorowyKodsu.UI
 {
     public partial class FormMain : Form
     {                        
@@ -12,7 +13,11 @@ namespace HardkorowyKodsu
         {
             InitializeComponent();
 
-            databaseInfoApi = new DatabaseInfoApi();
+            databaseInfoApi = new DatabaseInfoApi(
+                Setting.Instance.UrlBase,
+                Setting.Instance.GetVersionUrl,
+                Setting.Instance.GetAllTablesUrl,
+                Setting.Instance.GetAllColumnsUrl);
         }
 
         private async void btnTables_Click(object sender, EventArgs e)
@@ -31,9 +36,14 @@ namespace HardkorowyKodsu
 
         private async void btnColumns_Click(object sender, EventArgs e)
         {
+            string selectedTable = "";
+
             try
             {
-                grvColumns.DataSource = await databaseInfoApi.GetAllColumnsAsync();
+                if (grvTables.SelectedRows.Count > 0)
+                    selectedTable = grvTables.SelectedRows[0].Cells["TableName"].Value.ToString();
+
+                grvColumns.DataSource = await databaseInfoApi.GetAllColumnsAsync(selectedTable);
 
                 tbcDatabaseInfo.SelectedIndex = 1;
             }

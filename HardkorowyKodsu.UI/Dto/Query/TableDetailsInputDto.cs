@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HardkorowyKodsu.Dto.Query
+namespace HardkorowyKodsu.UI.Dto.Query
 {
     public class TableDetailsInputDto
     {

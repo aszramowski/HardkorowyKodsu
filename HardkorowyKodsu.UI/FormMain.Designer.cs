@@ -1,5 +1,5 @@
 ﻿
-namespace HardkorowyKodsu
+namespace HardkorowyKodsu.UI
 {
     partial class FormMain
     {
@@ -111,7 +111,7 @@ namespace HardkorowyKodsu
             this.tbpTables.Location = new System.Drawing.Point(4, 22);
             this.tbpTables.Name = "tbpTables";
             this.tbpTables.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpTables.Size = new System.Drawing.Size(660, 424);
+            this.tbpTables.Size = new System.Drawing.Size(834, 490);
             this.tbpTables.TabIndex = 0;
             this.tbpTables.Text = "Tables";
             this.tbpTables.UseVisualStyleBackColor = true;
@@ -121,9 +121,11 @@ namespace HardkorowyKodsu
             this.grvTables.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvTables.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grvTables.Location = new System.Drawing.Point(3, 3);
+            this.grvTables.MultiSelect = false;
             this.grvTables.Name = "grvTables";
             this.grvTables.ReadOnly = true;
-            this.grvTables.Size = new System.Drawing.Size(654, 418);
+            this.grvTables.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grvTables.Size = new System.Drawing.Size(828, 484);
             this.grvTables.TabIndex = 0;
             // 
             // tbpColumns
@@ -142,8 +144,10 @@ namespace HardkorowyKodsu
             this.grvColumns.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grvColumns.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grvColumns.Location = new System.Drawing.Point(3, 3);
+            this.grvColumns.MultiSelect = false;
             this.grvColumns.Name = "grvColumns";
             this.grvColumns.ReadOnly = true;
+            this.grvColumns.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grvColumns.Size = new System.Drawing.Size(828, 484);
             this.grvColumns.TabIndex = 1;
             // 
@@ -155,7 +159,7 @@ namespace HardkorowyKodsu
             this.Controls.Add(this.tbcDatabaseInfo);
             this.Controls.Add(this.panel1);
             this.Name = "FormMain";
-            this.Text = "HardkorowyKodsu - new module for your drugstore";
+            this.Text = "HardkorowyKodsu.UI - new module for your drugstore";
             this.panel1.ResumeLayout(false);
             this.tbcDatabaseInfo.ResumeLayout(false);
             this.tbpTables.ResumeLayout(false);

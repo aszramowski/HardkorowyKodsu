@@ -1,25 +1,31 @@
-﻿using HardkorowyKodsu.Dto.Query;
+﻿using HardkorowyKodsu.UI.Dto.Query;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HardkorowyKodsu.Services
+namespace HardkorowyKodsu.UI.Services
 {
     public class DatabaseInfoApi
     {
-        private string _url = @"http://localhost:5163/";
-        private string _urlGetVersion = @"api/System/GetVersion/";
-        private string _urlGetAllTables = @"api/DatabaseInfo/GetAllTables/";
-        private string _urlGetAllColumns = @"api/DatabaseInfo/GetAllColumns/";
+        private string _url;
+        private string _urlGetVersion;
+        private string _urlGetAllTables;
+        private string _urlGetAllColumns;
 
         private HttpClient httpClient;
 
-        public DatabaseInfoApi()
+        public DatabaseInfoApi(string url, string urlGetVersion, string urlGetAllTables, string urlGetAllColumns)
         {
+            _url = url;
+            _urlGetVersion = urlGetVersion;
+            _urlGetAllTables = urlGetAllTables;
+            _urlGetAllColumns = urlGetAllColumns;
+
             httpClient = new HttpClient();
         }
 
