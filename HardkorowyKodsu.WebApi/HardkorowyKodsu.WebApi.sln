@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardkorowyKodsu.WebApi", "H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardkorowyKodsu.Contract", "..\HardkorowyKodsu.Contract\HardkorowyKodsu.Contract.csproj", "{B93A2B42-79F2-485B-83A4-AE4488790E8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardkorowyKodsu.UT", "..\HardkorowyKodsu.UT\HardkorowyKodsu.UT.csproj", "{BDE00EE8-48DD-4163-AB90-E2EB71916CFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardkorowyKodsu.Tests", "..\HardkorowyKodsu.Tests\HardkorowyKodsu.Tests.csproj", "{EFCFDAA4-AB91-482D-8874-122A71AC1BA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B93A2B42-79F2-485B-83A4-AE4488790E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B93A2B42-79F2-485B-83A4-AE4488790E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B93A2B42-79F2-485B-83A4-AE4488790E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDE00EE8-48DD-4163-AB90-E2EB71916CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDE00EE8-48DD-4163-AB90-E2EB71916CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDE00EE8-48DD-4163-AB90-E2EB71916CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDE00EE8-48DD-4163-AB90-E2EB71916CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFCFDAA4-AB91-482D-8874-122A71AC1BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFCFDAA4-AB91-482D-8874-122A71AC1BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFCFDAA4-AB91-482D-8874-122A71AC1BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFCFDAA4-AB91-482D-8874-122A71AC1BA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
